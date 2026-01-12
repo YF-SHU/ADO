@@ -1,0 +1,498 @@
+<https://w3id.org/ado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ado> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
+<https://w3id.org/ado> <http://purl.org/dc/terms/creator> "Yanfeng Shu" .
+<https://w3id.org/ado> <http://purl.org/dc/terms/description> "An ontology to model AI-DT systems including physical systems, computational models, and data and processes." .
+<https://w3id.org/ado> <http://purl.org/dc/terms/title> "The AI-DT ontology" .
+<https://w3id.org/ado> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ado" .
+<https://w3id.org/ado> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ado#" .
+<https://w3id.org/ado> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/mls#executes
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#executes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
+# 
+# http://www.w3.org/ns/mls#hasInput
+<http://www.w3.org/ns/mls#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasInput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
+# 
+# http://www.w3.org/ns/mls#hasOutput
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/mls#hasOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#generated> .
+# 
+# http://www.w3.org/ns/mls#hasQuality
+<http://www.w3.org/ns/mls#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/prov#used
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/prov#wasAssociatedWith
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "In ADO, this property is used to link SensingActivity or ActuationActivity to sosa:FeatureOfInterest." .
+# 
+# http://www.w3.org/ns/ssn/hasProperty
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/mls#hasQuality> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+# 
+# http://www.w3.org/ns/ssn/systems/hasOperatingRange
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/systems/OperatingRange> .
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# http://www.w3.org/ns/ssn/systems/hasSystemCapability
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/systems/SystemCapability> .
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# http://www.w3.org/ns/ssn/systems/hasSystemProperty
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://www.w3.org/ns/ssn/systems/hasSystemProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# http://www.w3.org/ns/ssn/systems/inCondition
+<http://www.w3.org/ns/ssn/systems/inCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/inCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/systems/Condition> .
+<http://www.w3.org/ns/ssn/systems/inCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# https://w3id.org/ado#hasActedOnProperty
+<https://w3id.org/ado#hasActedOnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ado#hasActedOnProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ado#ActuationActivity> .
+<https://w3id.org/ado#hasActedOnProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ActuatableProperty> .
+<https://w3id.org/ado#hasActedOnProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to link ado:ActuationActivity to sosa:ActuableProperty. Reusing sosa:actsOnProeprty would result in ActuationActivity being classified as sosa:Actuation." .
+<https://w3id.org/ado#hasActedOnProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#hasActedOnProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasActedOnProperty" .
+# 
+# https://w3id.org/ado#hasObservedProperty
+<https://w3id.org/ado#hasObservedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ado#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ado#SensingActivity> .
+<https://w3id.org/ado#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<https://w3id.org/ado#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to link ado:SensingActivity to sosa:ObservableProperty. Reusing sosa:observedProperty would result in SensingActivity being classified as sosa:Observation." .
+<https://w3id.org/ado#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasObservedProperty" .
+# 
+# https://w3id.org/ado#performedByActuator
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ado#ActuationActivity> .
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Actuator> .
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to link ado:ActuationActivity to sosa:Actuator." .
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#performedByActuator> <http://www.w3.org/2000/01/rdf-schema#label> "performed by Actuator" .
+# 
+# https://w3id.org/ado#performedBySensor
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ado#SensingActivity> .
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sensor> .
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "In ADO, this property is used to link ado:SensingActivity to sosa:Sensor." .
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#performedBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "performed By Sensor" .
+# 
+# https://w3id.org/ado#performedBySimulator
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ado#Simulation> .
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ado#Simulator> .
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation that links Simulation to a simulator." .
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#performedBySimulator> <http://www.w3.org/2000/01/rdf-schema#label> "performed by Simulator" .
+# 
+# https://w3id.org/ado#runsOn
+<https://w3id.org/ado#runsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ado#runsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ado#OperationalModel> .
+<https://w3id.org/ado#runsOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ado#Environment> .
+<https://w3id.org/ado#runsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation that links to an environment." .
+<https://w3id.org/ado#runsOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#runsOn> <http://www.w3.org/2000/01/rdf-schema#label> "runs on" .
+# 
+# https://w3id.org/ep-plan#correspondsToStep
+<https://w3id.org/ep-plan#correspondsToStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/mls#Dataset
+<http://www.w3.org/ns/mls#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/mls#InformationEntity
+<http://www.w3.org/ns/mls#InformationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#InformationEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Entity> .
+# 
+# http://www.w3.org/ns/mls#Model
+<http://www.w3.org/ns/mls#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ado#AIModel> .
+# 
+# http://www.w3.org/ns/mls#Process
+<http://www.w3.org/ns/mls#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/mls#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ado#ModelLearning> .
+# 
+# http://www.w3.org/ns/mls#Quality
+<http://www.w3.org/ns/mls#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Role
+<http://www.w3.org/ns/prov#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ActuatableProperty
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Actuator
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Agent> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Entity> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Agent> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Entity> .
+# 
+# http://www.w3.org/ns/ssn/Property
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#Quality> .
+# 
+# http://www.w3.org/ns/ssn/systems/Condition
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# http://www.w3.org/ns/ssn/systems/OperatingRange
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/OperatingRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# http://www.w3.org/ns/ssn/systems/SystemCapability
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SystemCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# http://www.w3.org/ns/ssn/systems/SystemProperty
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/systems/SystemProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/." .
+# 
+# https://w3id.org/ado#AIModel
+<https://w3id.org/ado#AIModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#AIModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ado#ComputationalModel> .
+<https://w3id.org/ado#AIModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ado#HybridModel> .
+<https://w3id.org/ado#AIModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ado#PhysicsBasedModel> .
+<https://w3id.org/ado#AIModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A data-driven model based on AI or ML techniques." .
+<https://w3id.org/ado#AIModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#AIModel> <http://www.w3.org/2000/01/rdf-schema#label> "AI Model" .
+# 
+# https://w3id.org/ado#ActuationActivity
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/ActuatableProperty> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#hasActedOnProperty> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Actuator> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#performedByActuator> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#ActuationStep> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ep-plan#correspondsToStep> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#performedByActuator> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuation activity which may continue for a duration of time" .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ActuationActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation Activity" .
+# 
+# https://w3id.org/ado#ActuationStep
+<https://w3id.org/ado#ActuationStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ActuationStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Step> .
+<https://w3id.org/ado#ActuationStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A step which specifies the actuation activity." .
+<https://w3id.org/ado#ActuationStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ActuationStep> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation Step" .
+# 
+# https://w3id.org/ado#ComputationalModel
+<https://w3id.org/ado#ComputationalModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ComputationalModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+<https://w3id.org/ado#ComputationalModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A computational model which can be data-driven, phyics-based, or both" .
+<https://w3id.org/ado#ComputationalModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ComputationalModel> <http://www.w3.org/2000/01/rdf-schema#label> "Computational Model" .
+# 
+# https://w3id.org/ado#DataCollectionPlan
+<https://w3id.org/ado#DataCollectionPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#DataCollectionPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Plan> .
+<https://w3id.org/ado#DataCollectionPlan> <http://www.w3.org/2000/01/rdf-schema#comment> <https://w3id.org/ado#> .
+<https://w3id.org/ado#DataCollectionPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A plan which specifies the data collection process." .
+<https://w3id.org/ado#DataCollectionPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Data Collection Plan" .
+# 
+# https://w3id.org/ado#DataStream
+<https://w3id.org/ado#DataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#DataStream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#Dataset> .
+<https://w3id.org/ado#DataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequence of time-varying data elements." .
+<https://w3id.org/ado#DataStream> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#DataStream> <http://www.w3.org/2000/01/rdf-schema#label> "Data Stream" .
+# 
+# https://w3id.org/ado#DataTransformation
+<https://w3id.org/ado#DataTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#DataTransformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> .
+<https://w3id.org/ado#DataTransformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#DataTransformationStep> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ep-plan#correspondsToStep> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#DataTransformation> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that changes data from one form to another, preparing data for model training." .
+<https://w3id.org/ado#DataTransformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#DataTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "Data Transformation" .
+# 
+# https://w3id.org/ado#DataTransformationStep
+<https://w3id.org/ado#DataTransformationStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#DataTransformationStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Step> .
+<https://w3id.org/ado#DataTransformationStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A step which specifies the data transformation activity." .
+<https://w3id.org/ado#DataTransformationStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#DataTransformationStep> <http://www.w3.org/2000/01/rdf-schema#label> "Data Transformation Step" .
+# 
+# https://w3id.org/ado#Environment
+<https://w3id.org/ado#Environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#Environment> <http://www.w3.org/2000/01/rdf-schema#comment> "An environment where a model runs, including infrastrcuture, hardware, physical and networking context" .
+<https://w3id.org/ado#Environment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#Environment> <http://www.w3.org/2000/01/rdf-schema#label> "Environment" .
+# 
+# https://w3id.org/ado#HybridModel
+<https://w3id.org/ado#HybridModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#HybridModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ado#ComputationalModel> .
+<https://w3id.org/ado#HybridModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ado#PhysicsBasedModel> .
+<https://w3id.org/ado#HybridModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Hybrid model contains both data-driven and phyiscs based components." .
+<https://w3id.org/ado#HybridModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#HybridModel> <http://www.w3.org/2000/01/rdf-schema#label> "Hybrid Model" .
+# 
+# https://w3id.org/ado#ModelDeployment
+<https://w3id.org/ado#ModelDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> .
+<https://w3id.org/ado#ModelDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#ModelDeploymentStep> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ep-plan#correspondsToStep> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ModelDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that deploys a trained model in an environment including configuration of execution bindings." .
+<https://w3id.org/ado#ModelDeployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Model Deployment" .
+# 
+# https://w3id.org/ado#ModelDeploymentStep
+<https://w3id.org/ado#ModelDeploymentStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelDeploymentStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Step> .
+<https://w3id.org/ado#ModelDeploymentStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A step which specifies the model deployment activity." .
+<https://w3id.org/ado#ModelDeploymentStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelDeploymentStep> <http://www.w3.org/2000/01/rdf-schema#label> "Model Deployment Step" .
+# 
+# https://w3id.org/ado#ModelDevelopmentPlan
+<https://w3id.org/ado#ModelDevelopmentPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelDevelopmentPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Plan> .
+<https://w3id.org/ado#ModelDevelopmentPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A plan which specifies the model development process, e.g., data tranformation and model learning steps." .
+<https://w3id.org/ado#ModelDevelopmentPlan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelDevelopmentPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Model Development Plan" .
+# 
+# https://w3id.org/ado#ModelExecution
+<https://w3id.org/ado#ModelExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> .
+<https://w3id.org/ado#ModelExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#ModelExecutionStep> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ep-plan#correspondsToStep> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ModelExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that runs an operational model in an environment" .
+<https://w3id.org/ado#ModelExecution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Model Execution" .
+# 
+# https://w3id.org/ado#ModelExecutionStep
+<https://w3id.org/ado#ModelExecutionStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelExecutionStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Step> .
+<https://w3id.org/ado#ModelExecutionStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A step which specifies the model execution step." .
+<https://w3id.org/ado#ModelExecutionStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelExecutionStep> <http://www.w3.org/2000/01/rdf-schema#label> "Model Execution Step" .
+# 
+# https://w3id.org/ado#ModelLearning
+<https://w3id.org/ado#ModelLearning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelLearning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> .
+<https://w3id.org/ado#ModelLearning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#ModelLearningStep> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ep-plan#correspondsToStep> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#ModelLearning> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that captures patterns from data" .
+<https://w3id.org/ado#ModelLearning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelLearning> <http://www.w3.org/2000/01/rdf-schema#label> "Model Learning" .
+# 
+# https://w3id.org/ado#ModelLearningStep
+<https://w3id.org/ado#ModelLearningStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#ModelLearningStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Step> .
+<https://w3id.org/ado#ModelLearningStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A step which specifies the model learning step" .
+<https://w3id.org/ado#ModelLearningStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#ModelLearningStep> <http://www.w3.org/2000/01/rdf-schema#label> "Model Learning Step" .
+# 
+# https://w3id.org/ado#OperationalModel
+<https://w3id.org/ado#OperationalModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#OperationalModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> .
+<https://w3id.org/ado#OperationalModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A model that is deployed and used in an operational environment." .
+<https://w3id.org/ado#OperationalModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#OperationalModel> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Model" .
+# 
+# https://w3id.org/ado#PhysicsBasedModel
+<https://w3id.org/ado#PhysicsBasedModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#PhysicsBasedModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ado#ComputationalModel> .
+<https://w3id.org/ado#PhysicsBasedModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A model based on physics laws or equations." .
+<https://w3id.org/ado#PhysicsBasedModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#PhysicsBasedModel> <http://www.w3.org/2000/01/rdf-schema#label> "Physics Based Model" .
+# 
+# https://w3id.org/ado#SensingActivity
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/ObservableProperty> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#hasObservedProperty> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sensor> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#performedBySensor> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#SensingStep> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ep-plan#correspondsToStep> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#performedBySensor> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensing activity which may continue for a duration of time." .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#SensingActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Sensing Activity" .
+# 
+# https://w3id.org/ado#SensingStep
+<https://w3id.org/ado#SensingStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#SensingStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Step> .
+<https://w3id.org/ado#SensingStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A step which specifies the sensing activity." .
+<https://w3id.org/ado#SensingStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#SensingStep> <http://www.w3.org/2000/01/rdf-schema#label> "Sensing Step" .
+# 
+# https://w3id.org/ado#Simulation
+<https://w3id.org/ado#Simulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ado#ModelExecution> .
+<https://w3id.org/ado#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ado#Simulator> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#performedBySimulator> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ado#performedBySimulator> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ado#Simulation> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of model execution which models system behaviour over time or under different scenario." .
+<https://w3id.org/ado#Simulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#Simulation> <http://www.w3.org/2000/01/rdf-schema#label> "Simulation" .
+# 
+# https://w3id.org/ado#Simulator
+<https://w3id.org/ado#Simulator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ado#Simulator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Agent> .
+<https://w3id.org/ado#Simulator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Entity> .
+<https://w3id.org/ado#Simulator> <http://www.w3.org/2000/01/rdf-schema#comment> "Any system (software, hardware, tool, etc) that performs simulation." .
+<https://w3id.org/ado#Simulator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ado#> .
+<https://w3id.org/ado#Simulator> <http://www.w3.org/2000/01/rdf-schema#label> "Simulator" .
+# 
+# https://w3id.org/ep-plan#Activity
+<https://w3id.org/ep-plan#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ep-plan#Agent
+<https://w3id.org/ep-plan#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ep-plan#Entity
+<https://w3id.org/ep-plan#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ep-plan#Plan
+<https://w3id.org/ep-plan#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ep-plan#Step
+<https://w3id.org/ep-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ado#model_test
+<https://w3id.org/ado#model_test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ado#model_test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://w3id.org/ado#model_test> <http://www.w3.org/2000/01/rdf-schema#comment> "the role of an entity or agent is for model test." .
+# 
+# https://w3id.org/ado#model_training
+<https://w3id.org/ado#model_training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ado#model_training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://w3id.org/ado#model_training> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of an entity or agent for model training." .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

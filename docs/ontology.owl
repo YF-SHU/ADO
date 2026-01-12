@@ -1,0 +1,902 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ado#"
+     xml:base="https://w3id.org/ado"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/ado">
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        <terms:creator>Yanfeng Shu</terms:creator>
+        <terms:description>An ontology to model AI-DT systems including physical systems, computational models, and data and processes.</terms:description>
+        <terms:title>The AI-DT ontology</terms:title>
+        <vann:preferredNamespacePrefix>ado</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/ado#</vann:preferredNamespaceUri>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/mls#executes -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/mls#executes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/mls#hasInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/mls#hasOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#hasQuality -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/mls#hasQuality"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generated -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#generated"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#used"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        <rdfs:comment>In ADO, this property is used to link SensingActivity or ActuationActivity to sosa:FeatureOfInterest.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/mls#hasQuality"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasOperatingRange -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasOperatingRange">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasSystemCapability -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasSystemCapability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasSystemProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasSystemProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/inCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/inCondition">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ado#hasActedOnProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ado#hasActedOnProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/ado#ActuationActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+        <rdfs:comment>A property to link ado:ActuationActivity to sosa:ActuableProperty. Reusing sosa:actsOnProeprty would result in ActuationActivity being classified as sosa:Actuation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>hasActedOnProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ado#hasObservedProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ado#hasObservedProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/ado#SensingActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:comment>A property to link ado:SensingActivity to sosa:ObservableProperty. Reusing sosa:observedProperty would result in SensingActivity being classified as sosa:Observation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>hasObservedProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ado#performedByActuator -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ado#performedByActuator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ado#ActuationActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <rdfs:comment>A property to link ado:ActuationActivity to sosa:Actuator.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>performed by Actuator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ado#performedBySensor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ado#performedBySensor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ado#SensingActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment>In ADO, this property is used to link ado:SensingActivity to sosa:Sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>performed By Sensor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ado#performedBySimulator -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ado#performedBySimulator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ado#Simulation"/>
+        <rdfs:range rdf:resource="https://w3id.org/ado#Simulator"/>
+        <rdfs:comment>A relation that links Simulation to a simulator.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>performed by Simulator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ado#runsOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ado#runsOn">
+        <rdfs:domain rdf:resource="https://w3id.org/ado#OperationalModel"/>
+        <rdfs:range rdf:resource="https://w3id.org/ado#Environment"/>
+        <rdfs:comment>A relation that links to an environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>runs on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ep-plan#correspondsToStep -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ep-plan#correspondsToStep"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/mls#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#InformationEntity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#InformationEntity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#Model -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Model">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ado#AIModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#Process -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Process">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ado#ModelLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/mls#Quality -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/mls#Quality"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Role -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Role"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ActuatableProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuator -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Property -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/Condition -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/Condition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/OperatingRange -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/OperatingRange">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/SystemCapability -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/SystemCapability">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/SystemProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/SystemProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:comment>Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#AIModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#AIModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ado#ComputationalModel"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ado#HybridModel"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ado#PhysicsBasedModel"/>
+        <rdfs:comment>A data-driven model based on AI or ML techniques.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>AI Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ActuationActivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ActuationActivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#hasActedOnProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#performedByActuator"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToStep"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#ActuationStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#performedByActuator"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An actuation activity which may continue for a duration of time</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Actuation Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ActuationStep -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ActuationStep">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Step"/>
+        <rdfs:comment>A step which specifies the actuation activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Actuation Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ComputationalModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ComputationalModel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#InformationEntity"/>
+        <rdfs:comment>A computational model which can be data-driven, phyics-based, or both</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Computational Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#DataCollectionPlan -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#DataCollectionPlan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Plan"/>
+        <rdfs:comment rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:comment>A plan which specifies the data collection process.</rdfs:comment>
+        <rdfs:label>Data Collection Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#DataStream -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#DataStream">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#Dataset"/>
+        <rdfs:comment>A sequence of time-varying data elements.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Data Stream</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#DataTransformation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#DataTransformation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToStep"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#DataTransformationStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An activity that changes data from one form to another, preparing data for model training.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Data Transformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#DataTransformationStep -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#DataTransformationStep">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Step"/>
+        <rdfs:comment>A step which specifies the data transformation activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Data Transformation Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#Environment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#Environment">
+        <rdfs:comment>An environment where a model runs, including infrastrcuture, hardware, physical and networking context</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#HybridModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#HybridModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ado#ComputationalModel"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ado#PhysicsBasedModel"/>
+        <rdfs:comment>A Hybrid model contains both data-driven and phyiscs based components.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Hybrid Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelDeployment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelDeployment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToStep"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#ModelDeploymentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An activity that deploys a trained model in an environment including configuration of execution bindings.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelDeploymentStep -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelDeploymentStep">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Step"/>
+        <rdfs:comment>A step which specifies the model deployment activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Deployment Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelDevelopmentPlan -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelDevelopmentPlan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Plan"/>
+        <rdfs:comment>A plan which specifies the model development process, e.g., data tranformation and model learning steps.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Development Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelExecution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelExecution">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToStep"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#ModelExecutionStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An activity that runs an operational model in an environment</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelExecutionStep -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelExecutionStep">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Step"/>
+        <rdfs:comment>A step which specifies the model execution step.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Execution Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelLearning -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelLearning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToStep"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#ModelLearningStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An activity that captures patterns from data</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#ModelLearningStep -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#ModelLearningStep">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Step"/>
+        <rdfs:comment>A step which specifies the model learning step</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Model Learning Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#OperationalModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#OperationalModel">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#InformationEntity"/>
+        <rdfs:comment>A model that is deployed and used in an operational environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Operational Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#PhysicsBasedModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#PhysicsBasedModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ado#ComputationalModel"/>
+        <rdfs:comment>A model based on physics laws or equations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Physics Based Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#SensingActivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#SensingActivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#hasObservedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#performedBySensor"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToStep"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#SensingStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#performedBySensor"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A sensing activity which may continue for a duration of time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Sensing Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#SensingStep -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#SensingStep">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Step"/>
+        <rdfs:comment>A step which specifies the sensing activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Sensing Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#Simulation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#Simulation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ado#ModelExecution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#performedBySimulator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ado#Simulator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ado#performedBySimulator"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A type of model execution which models system behaviour over time or under different scenario.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Simulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ado#Simulator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ado#Simulator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Entity"/>
+        <rdfs:comment>Any system (software, hardware, tool, etc) that performs simulation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ado#"/>
+        <rdfs:label>Simulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ep-plan#Activity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ep-plan#Activity"/>
+    
+
+
+    <!-- https://w3id.org/ep-plan#Agent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ep-plan#Agent"/>
+    
+
+
+    <!-- https://w3id.org/ep-plan#Entity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ep-plan#Entity"/>
+    
+
+
+    <!-- https://w3id.org/ep-plan#Plan -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ep-plan#Plan"/>
+    
+
+
+    <!-- https://w3id.org/ep-plan#Step -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ep-plan#Step"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/ado#model_test -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ado#model_test">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment>the role of an entity or agent is for model test.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ado#model_training -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ado#model_training">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment>The role of an entity or agent for model training.</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
