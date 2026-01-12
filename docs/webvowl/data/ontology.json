@@ -113,7 +113,7 @@
     "id" : "65",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "68",
     "type" : "owl:Class"
   }, {
     "id" : "8",
@@ -185,7 +185,7 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "55",
     "type" : "owl:Class"
   }, {
     "id" : "6",
@@ -513,7 +513,7 @@
     "comment" : {
       "undefined" : "A step which specifies the model deployment activity."
     },
-    "id" : "66",
+    "id" : "68",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/ado#SensingActivity",
@@ -881,7 +881,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "39",
-    "superClasses" : [ "11", "12" ]
+    "superClasses" : [ "12", "11" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -890,7 +890,7 @@
       "IRI-based" : "FeatureOfInterest"
     },
     "attributes" : [ "external" ],
-    "id" : "54"
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/ep-plan#Step",
     "baseIri" : "https://w3id.org/ep-plan",
@@ -898,7 +898,7 @@
     "label" : {
       "IRI-based" : "Step"
     },
-    "subClasses" : [ "5", "41", "77", "66", "58", "79" ],
+    "subClasses" : [ "5", "41", "77", "68", "58", "79" ],
     "attributes" : [ "external" ],
     "id" : "6"
   }, {
@@ -999,7 +999,7 @@
     "id" : "53",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "55",
+    "id" : "54",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "56",
@@ -1023,7 +1023,7 @@
     "id" : "64",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "67",
+    "id" : "66",
     "type" : "owl:objectProperty"
   }, {
     "id" : "47",
@@ -1107,7 +1107,7 @@
     "id" : "102",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "68",
+    "id" : "67",
     "type" : "owl:objectProperty"
   }, {
     "id" : "103",
@@ -1289,9 +1289,32 @@
     "attributes" : [ "object" ],
     "id" : "25"
   }, {
+    "iri" : "https://w3id.org/ado#performedBySensor",
+    "baseIri" : "https://w3id.org/ado",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ado#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "performedBySensor",
+      "undefined" : "performed By Sensor"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "In ADO, this property is used to link ado:SensingActivity to sosa:Sensor."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "53"
+  }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "54",
+    "range" : "55",
     "label" : {
       "IRI-based" : "hasFeatureOfInterest"
     },
@@ -1300,17 +1323,7 @@
       "undefined" : "In ADO, this property is used to link SensingActivity or ActuationActivity to sosa:FeatureOfInterest."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "53"
-  }, {
-    "iri" : "https://w3id.org/ep-plan#correspondsToStep",
-    "baseIri" : "https://w3id.org/ep-plan",
-    "range" : "41",
-    "label" : {
-      "IRI-based" : "correspondsToStep"
-    },
-    "domain" : "8",
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "55"
+    "id" : "54"
   }, {
     "iri" : "https://w3id.org/ado#performedBySimulator",
     "baseIri" : "https://w3id.org/ado",
@@ -1367,27 +1380,14 @@
     "attributes" : [ "object", "allValues" ],
     "id" : "59"
   }, {
-    "iri" : "https://w3id.org/ado#performedBySensor",
-    "baseIri" : "https://w3id.org/ado",
-    "range" : "39",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/ado#",
-        "type" : "iri"
-      } ]
-    },
+    "iri" : "https://w3id.org/ep-plan#correspondsToStep",
+    "baseIri" : "https://w3id.org/ep-plan",
+    "range" : "41",
     "label" : {
-      "IRI-based" : "performedBySensor",
-      "undefined" : "performed By Sensor"
+      "IRI-based" : "correspondsToStep"
     },
-    "superproperty" : [ "23" ],
     "domain" : "8",
-    "comment" : {
-      "undefined" : "In ADO, this property is used to link ado:SensingActivity to sosa:Sensor."
-    },
-    "attributes" : [ "object", "allValues" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "60"
   }, {
     "range" : "29",
@@ -1411,10 +1411,10 @@
     "label" : {
       "IRI-based" : "hasOutput"
     },
-    "superproperty" : [ "68" ],
+    "superproperty" : [ "67" ],
     "domain" : "24",
     "attributes" : [ "object", "external" ],
-    "id" : "67"
+    "id" : "66"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1465,7 +1465,7 @@
     "id" : "73"
   }, {
     "range" : "6",
-    "domain" : "66",
+    "domain" : "68",
     "attributes" : [ "object", "anonymous" ],
     "id" : "74"
   }, {
@@ -1638,9 +1638,9 @@
       "IRI-based" : "generated"
     },
     "domain" : "24",
-    "subproperty" : [ "67" ],
+    "subproperty" : [ "66" ],
     "attributes" : [ "object", "external" ],
-    "id" : "68"
+    "id" : "67"
   }, {
     "iri" : "https://w3id.org/ado#runsOn",
     "baseIri" : "https://w3id.org/ado",
@@ -1679,28 +1679,6 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "107"
   }, {
-    "iri" : "https://w3id.org/ado#hasActedOnProperty",
-    "baseIri" : "https://w3id.org/ado",
-    "range" : "65",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/ado#",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasActedOnProperty",
-      "undefined" : "hasActedOnProperty"
-    },
-    "domain" : "33",
-    "comment" : {
-      "undefined" : "A property to link ado:ActuationActivity to sosa:ActuableProperty. Reusing sosa:actsOnProeprty would result in ActuationActivity being classified as sosa:Actuation."
-    },
-    "attributes" : [ "object", "allValues" ],
-    "id" : "108"
-  }, {
     "iri" : "https://w3id.org/ep-plan#correspondsToStep",
     "baseIri" : "https://w3id.org/ep-plan",
     "range" : "77",
@@ -1709,20 +1687,7 @@
     },
     "domain" : "33",
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "109"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "54",
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest"
-    },
-    "domain" : "33",
-    "comment" : {
-      "undefined" : "In ADO, this property is used to link SensingActivity or ActuationActivity to sosa:FeatureOfInterest."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "110"
+    "id" : "108"
   }, {
     "iri" : "https://w3id.org/ado#performedByActuator",
     "baseIri" : "https://w3id.org/ado",
@@ -1745,6 +1710,41 @@
       "undefined" : "A property to link ado:ActuationActivity to sosa:Actuator."
     },
     "attributes" : [ "object", "allValues" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://w3id.org/ado#hasActedOnProperty",
+    "baseIri" : "https://w3id.org/ado",
+    "range" : "65",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ado#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasActedOnProperty",
+      "undefined" : "hasActedOnProperty"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "A property to link ado:ActuationActivity to sosa:ActuableProperty. Reusing sosa:actsOnProeprty would result in ActuationActivity being classified as sosa:Actuation."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "In ADO, this property is used to link SensingActivity or ActuationActivity to sosa:FeatureOfInterest."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "111"
   }, {
     "iri" : "https://w3id.org/ep-plan#correspondsToStep",
@@ -1764,7 +1764,7 @@
   }, {
     "iri" : "https://w3id.org/ep-plan#correspondsToStep",
     "baseIri" : "https://w3id.org/ep-plan",
-    "range" : "66",
+    "range" : "68",
     "label" : {
       "IRI-based" : "correspondsToStep"
     },
