@@ -13,11 +13,11 @@
 <script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
 	<dark-mode-toggle class="slider"></dark-mode-toggle>
 </div>
-<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>The AI-DT ontology</title>
+ <title>The AI-DT ontology</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ado#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ado#","name":"The AI-DT ontology", "headline":"Document describing the ontology https://w3id.org/ado#", "dateReleased":"Mon Jan 12 17:50:00 AEDT 2026", "version":"1.0", "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Yanfeng Shu"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ado#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ado#","name":"The AI-DT ontology", "headline":"Document describing the ontology https://w3id.org/ado#", "dateReleased":"Mon Jan 12 17:54:33 AEDT 2026", "version":"1.0", "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Yanfeng Shu"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -53,15 +53,12 @@ function loadTOC(){
 	  t+='</ul>';
 	  $("#toc").html(t); 
 }
- $.fn.ignore = function(sel){
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- };    $(function(){
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
-    });
-    </script> 
+ }; 
+   </script> 
   </head> 
 
 <body>
@@ -91,10 +88,1472 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div><div id="toc"></div>     <div id="overview"></div>
-     <div id="description"></div>
-     <div id="crossref"></div>
-     <div id="references"></div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The AI-DT ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ActuationActivity" title="https://w3id.org/ado#ActuationActivity">Actuation Activity</a>
+   </li>
+   <li>
+      <a href="#ActuationStep" title="https://w3id.org/ado#ActuationStep">Actuation Step</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">
+         <span>Actuator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AIModel" title="https://w3id.org/ado#AIModel">AI Model</a>
+   </li>
+   <li>
+      <a href="#ComputationalModel" title="https://w3id.org/ado#ComputationalModel">Computational Model</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">
+         <span>Condition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataCollectionPlan" title="https://w3id.org/ado#DataCollectionPlan">Data Collection Plan</a>
+   </li>
+   <li>
+      <a href="#DataStream" title="https://w3id.org/ado#DataStream">Data Stream</a>
+   </li>
+   <li>
+      <a href="#DataTransformation" title="https://w3id.org/ado#DataTransformation">Data Transformation</a>
+   </li>
+   <li>
+      <a href="#DataTransformationStep" title="https://w3id.org/ado#DataTransformationStep">Data Transformation Step</a>
+   </li>
+   <li>
+      <a href="#Environment" title="https://w3id.org/ado#Environment">Environment</a>
+   </li>
+   <li>
+      <a href="#HybridModel" title="https://w3id.org/ado#HybridModel">Hybrid Model</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/mls#InformationEntity" title="http://www.w3.org/ns/mls#InformationEntity">
+         <span>Information Entity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/mls#Model" title="http://www.w3.org/ns/mls#Model">
+         <span>Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ModelDeployment" title="https://w3id.org/ado#ModelDeployment">Model Deployment</a>
+   </li>
+   <li>
+      <a href="#ModelDeploymentStep" title="https://w3id.org/ado#ModelDeploymentStep">Model Deployment Step</a>
+   </li>
+   <li>
+      <a href="#ModelDevelopmentPlan" title="https://w3id.org/ado#ModelDevelopmentPlan">Model Development Plan</a>
+   </li>
+   <li>
+      <a href="#ModelExecution" title="https://w3id.org/ado#ModelExecution">Model Execution</a>
+   </li>
+   <li>
+      <a href="#ModelExecutionStep" title="https://w3id.org/ado#ModelExecutionStep">Model Execution Step</a>
+   </li>
+   <li>
+      <a href="#ModelLearning" title="https://w3id.org/ado#ModelLearning">Model Learning</a>
+   </li>
+   <li>
+      <a href="#ModelLearningStep" title="https://w3id.org/ado#ModelLearningStep">Model Learning Step</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/OperatingRange" title="http://www.w3.org/ns/ssn/systems/OperatingRange">
+         <span>Operating Range</span>
+      </a>
+   </li>
+   <li>
+      <a href="#OperationalModel" title="https://w3id.org/ado#OperationalModel">Operational Model</a>
+   </li>
+   <li>
+      <a href="#PhysicsBasedModel" title="https://w3id.org/ado#PhysicsBasedModel">Physics Based Model</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/mls#Process" title="http://www.w3.org/ns/mls#Process">
+         <span>Process</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">
+         <span>Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SensingActivity" title="https://w3id.org/ado#SensingActivity">Sensing Activity</a>
+   </li>
+   <li>
+      <a href="#SensingStep" title="https://w3id.org/ado#SensingStep">Sensing Step</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">
+         <span>Sensor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Simulation" title="https://w3id.org/ado#Simulation">Simulation</a>
+   </li>
+   <li>
+      <a href="#Simulator" title="https://w3id.org/ado#Simulator">Simulator</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/SystemCapability"
+         title="http://www.w3.org/ns/ssn/systems/SystemCapability">
+         <span>System Capability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/SystemProperty" title="http://www.w3.org/ns/ssn/systems/SystemProperty">
+         <span>System Property</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/mls#executes" title="http://www.w3.org/ns/mls#executes">
+         <span>executes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+         <span>has Feature Of Interest</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/mls#hasInput" title="http://www.w3.org/ns/mls#hasInput">
+         <span>has Input</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/hasOperatingRange"
+         title="http://www.w3.org/ns/ssn/systems/hasOperatingRange">
+         <span>has Operating Range</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/mls#hasOutput" title="http://www.w3.org/ns/mls#hasOutput">
+         <span>has Output</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">
+         <span>has Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/hasSystemCapability"
+         title="http://www.w3.org/ns/ssn/systems/hasSystemCapability">
+         <span>has System Capability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/hasSystemProperty"
+         title="http://www.w3.org/ns/ssn/systems/hasSystemProperty">
+         <span>has System Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasActedOnProperty" title="https://w3id.org/ado#hasActedOnProperty">hasActedOnProperty</a>
+   </li>
+   <li>
+      <a href="#hasObservedProperty" title="https://w3id.org/ado#hasObservedProperty">hasObservedProperty</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/ssn/systems/inCondition" title="http://www.w3.org/ns/ssn/systems/inCondition">
+         <span>in Condition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#performedByActuator" title="https://w3id.org/ado#performedByActuator">performed by Actuator</a>
+   </li>
+   <li>
+      <a href="#performedBySensor" title="https://w3id.org/ado#performedBySensor">performed By Sensor</a>
+   </li>
+   <li>
+      <a href="#performedBySimulator" title="https://w3id.org/ado#performedBySimulator">performed by Simulator</a>
+   </li>
+   <li>
+      <a href="#runsOn" title="https://w3id.org/ado#runsOn">runs on</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#model_test" title="https://w3id.org/ado#model_test">
+         <span>model test</span>
+      </a>
+   </li>
+   <li>
+      <a href="#model_training" title="https://w3id.org/ado#model_training">
+         <span>model training</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The AI-DT ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">An ontology to model AI-DT systems including physical systems, computational models, and data and processes.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for The AI-DT ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The AI-DT ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#ActuationActivity" title="https://w3id.org/ado#ActuationActivity">Actuation Activity</a></li>
+  <li><a href="#ActuationStep" title="https://w3id.org/ado#ActuationStep">Actuation Step</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator"> <span>Actuator</span> </a></li>
+  <li><a href="#AIModel" title="https://w3id.org/ado#AIModel">AI Model</a></li>
+  <li><a href="#ComputationalModel" title="https://w3id.org/ado#ComputationalModel">Computational Model</a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition"> <span>Condition</span> </a></li>
+  <li><a href="#DataCollectionPlan" title="https://w3id.org/ado#DataCollectionPlan">Data Collection Plan</a></li>
+  <li><a href="#DataStream" title="https://w3id.org/ado#DataStream">Data Stream</a></li>
+  <li><a href="#DataTransformation" title="https://w3id.org/ado#DataTransformation">Data Transformation</a></li>
+  <li><a href="#DataTransformationStep" title="https://w3id.org/ado#DataTransformationStep">Data Transformation Step</a></li>
+  <li><a href="#Environment" title="https://w3id.org/ado#Environment">Environment</a></li>
+  <li><a href="#HybridModel" title="https://w3id.org/ado#HybridModel">Hybrid Model</a></li>
+  <li><a href="#http://www.w3.org/ns/mls#InformationEntity" title="http://www.w3.org/ns/mls#InformationEntity"> <span>Information Entity</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/mls#Model" title="http://www.w3.org/ns/mls#Model"> <span>Model</span> </a></li>
+  <li><a href="#ModelDeployment" title="https://w3id.org/ado#ModelDeployment">Model Deployment</a></li>
+  <li><a href="#ModelDeploymentStep" title="https://w3id.org/ado#ModelDeploymentStep">Model Deployment Step</a></li>
+  <li><a href="#ModelDevelopmentPlan" title="https://w3id.org/ado#ModelDevelopmentPlan">Model Development Plan</a></li>
+  <li><a href="#ModelExecution" title="https://w3id.org/ado#ModelExecution">Model Execution</a></li>
+  <li><a href="#ModelExecutionStep" title="https://w3id.org/ado#ModelExecutionStep">Model Execution Step</a></li>
+  <li><a href="#ModelLearning" title="https://w3id.org/ado#ModelLearning">Model Learning</a></li>
+  <li><a href="#ModelLearningStep" title="https://w3id.org/ado#ModelLearningStep">Model Learning Step</a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/OperatingRange" title="http://www.w3.org/ns/ssn/systems/OperatingRange"> <span>Operating Range</span> </a></li>
+  <li><a href="#OperationalModel" title="https://w3id.org/ado#OperationalModel">Operational Model</a></li>
+  <li><a href="#PhysicsBasedModel" title="https://w3id.org/ado#PhysicsBasedModel">Physics Based Model</a></li>
+  <li><a href="#http://www.w3.org/ns/mls#Process" title="http://www.w3.org/ns/mls#Process"> <span>Process</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property"> <span>Property</span> </a></li>
+  <li><a href="#SensingActivity" title="https://w3id.org/ado#SensingActivity">Sensing Activity</a></li>
+  <li><a href="#SensingStep" title="https://w3id.org/ado#SensingStep">Sensing Step</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor"> <span>Sensor</span> </a></li>
+  <li><a href="#Simulation" title="https://w3id.org/ado#Simulation">Simulation</a></li>
+  <li><a href="#Simulator" title="https://w3id.org/ado#Simulator">Simulator</a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/SystemCapability" title="http://www.w3.org/ns/ssn/systems/SystemCapability"> <span>System Capability</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/SystemProperty" title="http://www.w3.org/ns/ssn/systems/SystemProperty"> <span>System Property</span> </a></li>
+ </ul>
+ <div class="entity" id="ActuationActivity">
+  <h3>Actuation Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ActuationActivity</p>
+  <div class="comment">
+   <span class="markdown">An actuation activity which may continue for a duration of time</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Activity" target="_blank" title="https://w3id.org/ep-plan#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasActedOnProperty" title="https://w3id.org/ado#hasActedOnProperty">hasActedOnProperty</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedByActuator" title="https://w3id.org/ado#performedByActuator">performed by Actuator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ActuationStep">
+  <h3>Actuation Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ActuationStep</p>
+  <div class="comment">
+   <span class="markdown">A step which specifies the actuation activity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Step" target="_blank" title="https://w3id.org/ep-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Actuator">
+  <h3>Actuator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuator</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Agent" target="_blank" title="https://w3id.org/ep-plan#Agent">Agent</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ep-plan#Entity" target="_blank" title="https://w3id.org/ep-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#performedByActuator" title="https://w3id.org/ado#performedByActuator">performed by Actuator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIModel">
+  <h3>AI Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#AIModel</p>
+  <div class="comment">
+   <span class="markdown">A data-driven model based on AI or ML techniques.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComputationalModel" title="https://w3id.org/ado#ComputationalModel">Computational Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/mls#Model" title="http://www.w3.org/ns/mls#Model">Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#HybridModel" title="https://w3id.org/ado#HybridModel">Hybrid Model</a> <sup class="type-c" title="class">c</sup>, <a href="#PhysicsBasedModel" title="https://w3id.org/ado#PhysicsBasedModel">Physics Based Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComputationalModel">
+  <h3>Computational Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ComputationalModel</p>
+  <div class="comment">
+   <span class="markdown">A computational model which can be data-driven, phyics-based, or both</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/mls#InformationEntity" title="http://www.w3.org/ns/mls#InformationEntity">Information Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AIModel" title="https://w3id.org/ado#AIModel">AI Model</a> <sup class="type-c" title="class">c</sup>, <a href="#HybridModel" title="https://w3id.org/ado#HybridModel">Hybrid Model</a> <sup class="type-c" title="class">c</sup>, <a href="#PhysicsBasedModel" title="https://w3id.org/ado#PhysicsBasedModel">Physics Based Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/Condition">
+  <h3>Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/Condition</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/systems/inCondition" title="http://www.w3.org/ns/ssn/systems/inCondition">in Condition</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataCollectionPlan">
+  <h3>Data Collection Plan<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#DataCollectionPlan</p>
+  <div class="comment">
+   <span class="markdown"></span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Plan" target="_blank" title="https://w3id.org/ep-plan#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataStream">
+  <h3>Data Stream<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#DataStream</p>
+  <div class="comment">
+   <span class="markdown">A sequence of time-varying data elements.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/mls#Dataset" target="_blank" title="http://www.w3.org/ns/mls#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataTransformation">
+  <h3>Data Transformation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#DataTransformation</p>
+  <div class="comment">
+   <span class="markdown">An activity that changes data from one form to another, preparing data for model training.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Activity" target="_blank" title="https://w3id.org/ep-plan#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataTransformationStep">
+  <h3>Data Transformation Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#DataTransformationStep</p>
+  <div class="comment">
+   <span class="markdown">A step which specifies the data transformation activity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Step" target="_blank" title="https://w3id.org/ep-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Environment">
+  <h3>Environment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#Environment</p>
+  <div class="comment">
+   <span class="markdown">An environment where a model runs, including infrastrcuture, hardware, physical and networking context</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#runsOn" title="https://w3id.org/ado#runsOn">runs on</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HybridModel">
+  <h3>Hybrid Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#HybridModel</p>
+  <div class="comment">
+   <span class="markdown">A Hybrid model contains both data-driven and phyiscs based components.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComputationalModel" title="https://w3id.org/ado#ComputationalModel">Computational Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AIModel" title="https://w3id.org/ado#AIModel">AI Model</a> <sup class="type-c" title="class">c</sup>, <a href="#PhysicsBasedModel" title="https://w3id.org/ado#PhysicsBasedModel">Physics Based Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/mls#InformationEntity">
+  <h3>Information Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/mls#InformationEntity</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Entity" target="_blank" title="https://w3id.org/ep-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ComputationalModel" title="https://w3id.org/ado#ComputationalModel">Computational Model</a> <sup class="type-c" title="class">c</sup>, <a href="#OperationalModel" title="https://w3id.org/ado#OperationalModel">Operational Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/mls#Model">
+  <h3>Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/mls#Model</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AIModel" title="https://w3id.org/ado#AIModel">AI Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelDeployment">
+  <h3>Model Deployment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelDeployment</p>
+  <div class="comment">
+   <span class="markdown">An activity that deploys a trained model in an environment including configuration of execution bindings.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Activity" target="_blank" title="https://w3id.org/ep-plan#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelDeploymentStep">
+  <h3>Model Deployment Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelDeploymentStep</p>
+  <div class="comment">
+   <span class="markdown">A step which specifies the model deployment activity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Step" target="_blank" title="https://w3id.org/ep-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelDevelopmentPlan">
+  <h3>Model Development Plan<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelDevelopmentPlan</p>
+  <div class="comment">
+   <span class="markdown">A plan which specifies the model development process, e.g., data tranformation and model learning steps.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Plan" target="_blank" title="https://w3id.org/ep-plan#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelExecution">
+  <h3>Model Execution<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelExecution</p>
+  <div class="comment">
+   <span class="markdown">An activity that runs an operational model in an environment</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Activity" target="_blank" title="https://w3id.org/ep-plan#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Simulation" title="https://w3id.org/ado#Simulation">Simulation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelExecutionStep">
+  <h3>Model Execution Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelExecutionStep</p>
+  <div class="comment">
+   <span class="markdown">A step which specifies the model execution step.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Step" target="_blank" title="https://w3id.org/ep-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelLearning">
+  <h3>Model Learning<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelLearning</p>
+  <div class="comment">
+   <span class="markdown">An activity that captures patterns from data</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Activity" target="_blank" title="https://w3id.org/ep-plan#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/mls#Process" title="http://www.w3.org/ns/mls#Process">Process</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModelLearningStep">
+  <h3>Model Learning Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#ModelLearningStep</p>
+  <div class="comment">
+   <span class="markdown">A step which specifies the model learning step</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Step" target="_blank" title="https://w3id.org/ep-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/OperatingRange">
+  <h3>Operating Range<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/OperatingRange</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/systems/hasOperatingRange" title="http://www.w3.org/ns/ssn/systems/hasOperatingRange">has Operating Range</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OperationalModel">
+  <h3>Operational Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#OperationalModel</p>
+  <div class="comment">
+   <span class="markdown">A model that is deployed and used in an operational environment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/mls#InformationEntity" title="http://www.w3.org/ns/mls#InformationEntity">Information Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#runsOn" title="https://w3id.org/ado#runsOn">runs on</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PhysicsBasedModel">
+  <h3>Physics Based Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#PhysicsBasedModel</p>
+  <div class="comment">
+   <span class="markdown">A model based on physics laws or equations.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComputationalModel" title="https://w3id.org/ado#ComputationalModel">Computational Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AIModel" title="https://w3id.org/ado#AIModel">AI Model</a> <sup class="type-c" title="class">c</sup>, <a href="#HybridModel" title="https://w3id.org/ado#HybridModel">Hybrid Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/mls#Process">
+  <h3>Process<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/mls#Process</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ModelLearning" title="https://w3id.org/ado#ModelLearning">Model Learning</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/Property">
+  <h3>Property<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/Property</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/mls#Quality" target="_blank" title="http://www.w3.org/ns/mls#Quality">Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/ssn/systems/OperatingRange" title="http://www.w3.org/ns/ssn/systems/OperatingRange">Operating Range</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/ssn/systems/SystemCapability" title="http://www.w3.org/ns/ssn/systems/SystemCapability">System Capability</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/ssn/systems/SystemProperty" title="http://www.w3.org/ns/ssn/systems/SystemProperty">System Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SensingActivity">
+  <h3>Sensing Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#SensingActivity</p>
+  <div class="comment">
+   <span class="markdown">A sensing activity which may continue for a duration of time.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Activity" target="_blank" title="https://w3id.org/ep-plan#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasObservedProperty" title="https://w3id.org/ado#hasObservedProperty">hasObservedProperty</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedBySensor" title="https://w3id.org/ado#performedBySensor">performed By Sensor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SensingStep">
+  <h3>Sensing Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#SensingStep</p>
+  <div class="comment">
+   <span class="markdown">A step which specifies the sensing activity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Step" target="_blank" title="https://w3id.org/ep-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Sensor">
+  <h3>Sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Agent" target="_blank" title="https://w3id.org/ep-plan#Agent">Agent</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ep-plan#Entity" target="_blank" title="https://w3id.org/ep-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#performedBySensor" title="https://w3id.org/ado#performedBySensor">performed By Sensor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Simulation">
+  <h3>Simulation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#Simulation</p>
+  <div class="comment">
+   <span class="markdown">A type of model execution which models system behaviour over time or under different scenario.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ModelExecution" title="https://w3id.org/ado#ModelExecution">Model Execution</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#performedBySimulator" title="https://w3id.org/ado#performedBySimulator">performed by Simulator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Simulator">
+  <h3>Simulator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#Simulator</p>
+  <div class="comment">
+   <span class="markdown">Any system (software, hardware, tool, etc) that performs simulation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ep-plan#Agent" target="_blank" title="https://w3id.org/ep-plan#Agent">Agent</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ep-plan#Entity" target="_blank" title="https://w3id.org/ep-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#performedBySimulator" title="https://w3id.org/ado#performedBySimulator">performed by Simulator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/SystemCapability">
+  <h3>System Capability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/SystemCapability</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/systems/hasSystemCapability" title="http://www.w3.org/ns/ssn/systems/hasSystemCapability">has System Capability</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/SystemProperty">
+  <h3>System Property<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/SystemProperty</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/Property" title="http://www.w3.org/ns/ssn/Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/ssn/systems/hasSystemProperty" title="http://www.w3.org/ns/ssn/systems/hasSystemProperty">has System Property</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/mls#executes" title="http://www.w3.org/ns/mls#executes"> <span>executes</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest"> <span>has Feature Of Interest</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/mls#hasInput" title="http://www.w3.org/ns/mls#hasInput"> <span>has Input</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/hasOperatingRange" title="http://www.w3.org/ns/ssn/systems/hasOperatingRange"> <span>has Operating Range</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/mls#hasOutput" title="http://www.w3.org/ns/mls#hasOutput"> <span>has Output</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty"> <span>has Property</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/hasSystemCapability" title="http://www.w3.org/ns/ssn/systems/hasSystemCapability"> <span>has System Capability</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/hasSystemProperty" title="http://www.w3.org/ns/ssn/systems/hasSystemProperty"> <span>has System Property</span> </a></li>
+  <li><a href="#hasActedOnProperty" title="https://w3id.org/ado#hasActedOnProperty">hasActedOnProperty</a></li>
+  <li><a href="#hasObservedProperty" title="https://w3id.org/ado#hasObservedProperty">hasObservedProperty</a></li>
+  <li><a href="#http://www.w3.org/ns/ssn/systems/inCondition" title="http://www.w3.org/ns/ssn/systems/inCondition"> <span>in Condition</span> </a></li>
+  <li><a href="#performedByActuator" title="https://w3id.org/ado#performedByActuator">performed by Actuator</a></li>
+  <li><a href="#performedBySensor" title="https://w3id.org/ado#performedBySensor">performed By Sensor</a></li>
+  <li><a href="#performedBySimulator" title="https://w3id.org/ado#performedBySimulator">performed by Simulator</a></li>
+  <li><a href="#runsOn" title="https://w3id.org/ado#runsOn">runs on</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/mls#executes">
+  <h3>executes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/mls#executes</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#used" target="_blank" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+  <h3>has Feature Of Interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasFeatureOfInterest</p>
+  <div class="comment">
+   <span class="markdown">In ADO, this property is used to link SensingActivity or ActuationActivity to sosa:FeatureOfInterest.</span>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/mls#hasInput">
+  <h3>has Input<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/mls#hasInput</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#used" target="_blank" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/hasOperatingRange">
+  <h3>has Operating Range<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/hasOperatingRange</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/systems/OperatingRange" title="http://www.w3.org/ns/ssn/systems/OperatingRange">Operating Range</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/mls#hasOutput">
+  <h3>has Output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/mls#hasOutput</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#generated" target="_blank" title="http://www.w3.org/ns/prov#generated">generated</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/hasProperty">
+  <h3>has Property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/hasProperty</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/mls#hasQuality" target="_blank" title="http://www.w3.org/ns/mls#hasQuality">has Quality</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/systems/hasOperatingRange" title="http://www.w3.org/ns/ssn/systems/hasOperatingRange">has Operating Range</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/ssn/systems/hasSystemCapability" title="http://www.w3.org/ns/ssn/systems/hasSystemCapability">has System Capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/ssn/systems/hasSystemProperty" title="http://www.w3.org/ns/ssn/systems/hasSystemProperty">has System Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/hasSystemCapability">
+  <h3>has System Capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/hasSystemCapability</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/systems/SystemCapability" title="http://www.w3.org/ns/ssn/systems/SystemCapability">System Capability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/hasSystemProperty">
+  <h3>has System Property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/hasSystemProperty</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/hasProperty" title="http://www.w3.org/ns/ssn/hasProperty">has Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/systems/SystemProperty" title="http://www.w3.org/ns/ssn/systems/SystemProperty">System Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasActedOnProperty">
+  <h3>hasActedOnProperty<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#hasActedOnProperty</p>
+  <div class="comment">
+   <span class="markdown">A property to link ado:ActuationActivity to sosa:ActuableProperty. Reusing sosa:actsOnProeprty would result in ActuationActivity being classified as sosa:Actuation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ActuationActivity" title="https://w3id.org/ado#ActuationActivity">Actuation Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/ActuatableProperty" target="_blank" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasObservedProperty">
+  <h3>hasObservedProperty<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#hasObservedProperty</p>
+  <div class="comment">
+   <span class="markdown">A property to link ado:SensingActivity to sosa:ObservableProperty. Reusing sosa:observedProperty would result in SensingActivity being classified as sosa:Observation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SensingActivity" title="https://w3id.org/ado#SensingActivity">Sensing Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/ObservableProperty" target="_blank" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/ssn/systems/inCondition">
+  <h3>in Condition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/ssn/systems/inCondition</p>
+  <div class="comment">
+   <span class="markdown">Originally defined in the old version of SSN. Redefined in ADO, with the namespace http://www.w3.org/ns/ssn/systems/.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/ssn/systems/Condition" title="http://www.w3.org/ns/ssn/systems/Condition">Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="performedByActuator">
+  <h3>performed by Actuator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#performedByActuator</p>
+  <div class="comment">
+   <span class="markdown">A property to link ado:ActuationActivity to sosa:Actuator.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#wasAssociatedWith" target="_blank" title="http://www.w3.org/ns/prov#wasAssociatedWith">was Associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ActuationActivity" title="https://w3id.org/ado#ActuationActivity">Actuation Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="performedBySensor">
+  <h3>performed By Sensor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#performedBySensor</p>
+  <div class="comment">
+   <span class="markdown">In ADO, this property is used to link ado:SensingActivity to sosa:Sensor.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#wasAssociatedWith" target="_blank" title="http://www.w3.org/ns/prov#wasAssociatedWith">was Associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SensingActivity" title="https://w3id.org/ado#SensingActivity">Sensing Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="performedBySimulator">
+  <h3>performed by Simulator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#performedBySimulator</p>
+  <div class="comment">
+   <span class="markdown">A relation that links Simulation to a simulator.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#wasAssociatedWith" target="_blank" title="http://www.w3.org/ns/prov#wasAssociatedWith">was Associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Simulation" title="https://w3id.org/ado#Simulation">Simulation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Simulator" title="https://w3id.org/ado#Simulator">Simulator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="runsOn">
+  <h3>runs on<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#runsOn</p>
+  <div class="comment">
+   <span class="markdown">A relation that links to an environment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ado#">https://w3id.org/ado#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#OperationalModel" title="https://w3id.org/ado#OperationalModel">Operational Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Environment" title="https://w3id.org/ado#Environment">Environment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#model_test" title="https://w3id.org/ado#model_test"> <span>model test</span> </a></li>
+  <li><a href="#model_training" title="https://w3id.org/ado#model_training"> <span>model training</span> </a></li>
+ </ul>
+ <div class="entity" id="model_test">
+  <h3>model test<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#model_test</p>
+  <div class="comment">
+   <span class="markdown">the role of an entity or agent is for model test.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Role" target="_blank" title="http://www.w3.org/ns/prov#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="model_training">
+  <h3>model training<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ado#model_training</p>
+  <div class="comment">
+   <span class="markdown">The role of an entity or agent for model training.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Role" target="_blank" title="http://www.w3.org/ns/prov#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
